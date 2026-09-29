@@ -76,22 +76,29 @@
     }
 }
         nav {
+    dispnav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: center;
 }
 
 nav a,
 nav a:visited {
     color: white;
     text-decoration: none;
+    margin: 0 1px;
+}
+
+nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 13px;
+    color: #6b7280;
 }
 
 nav a:hover {
     color: #00ff88;
     text-decoration: none;
 }
-
 
         /* =========================
            CONTACT AREA
