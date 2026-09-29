@@ -1,117 +1,632 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Skills - Khid's Digital Space</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skills | Simon Miracle Khidharth</title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #111827;
             color: white;
         }
 
+        /* NAVIGATION */
+
         nav {
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 30px;
+            border-bottom: 1px solid #374151;
+            position: sticky;
+            top: 0;
+            background-color: #111827;
+            z-index: 1000;
         }
 
         nav h2 {
             margin: 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        nav div {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
+            font-size: 15px;
         }
 
-        .skills {
-            max-width: 900px;
-            margin: 70px auto;
-            padding: 30px 20px;
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* PAGE INTRO */
+
+        .skills-hero {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 30px 60px;
             text-align: center;
         }
 
-        .skills h1 {
-            font-size: 42px;
+        .small-title {
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #9ca3af;
+            font-weight: bold;
+        }
+
+        .skills-hero h1 {
+            font-size: 56px;
+            margin: 15px 0;
+        }
+
+        .skills-hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #d1d5db;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* SKILL CATEGORIES */
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 20px auto 100px;
+            padding: 0 30px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skill-category {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 18px;
+            padding: 35px;
+        }
+
+        .skill-category h2 {
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+        }
+
+        .skill-level {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #374151;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        /* PROFESSIONAL SKILLS */
+
+        .professional-section {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            padding: 60px 30px;
+            text-align: center;
+            border-top: 1px solid #374151;
+        }
+
+        .professional-section h2 {
+            font-size: 38px;
             margin-bottom: 15px;
         }
 
-        .intro {
+        .professional-section > p {
             color: #d1d5db;
             font-size: 18px;
-            margin-bottom: 40px;
+            line-height: 1.8;
         }
 
-        .skill-card {
+        .professional-skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .professional-card {
             background-color: #1f2937;
-            padding: 30px;
-            margin: 20px auto;
+            border: 1px solid #374151;
+            padding: 30px 20px;
             border-radius: 15px;
-            max-width: 600px;
-            text-align: left;
         }
 
-        .skill-card h2 {
-            margin-top: 0;
+        .professional-card h3 {
+            margin-bottom: 10px;
         }
 
-        .skill-card p {
+        .professional-card p {
             color: #d1d5db;
             line-height: 1.6;
+            margin: 0;
         }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 18px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav div {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skills-hero {
+                padding: 60px 25px 40px;
+            }
+
+            .skills-hero h1 {
+                font-size: 40px;
+            }
+
+            .skills-hero p {
+                font-size: 16px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                padding: 0 25px;
+            }
+
+            .professional-section {
+                padding: 50px 25px;
+            }
+
+            .professional-section h2 {
+                font-size: 30px;
+            }
+
+            .professional-skills {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
+
+    <!-- NAVIGATION -->
+
     <nav>
+
         <h2>KHID</h2>
 
         <div>
+
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
+
         </div>
+
     </nav>
 
-    <section class="skills">
 
-        <h1>My Skills</h1>
+    <!-- PAGE INTRO -->
 
-        <p class="intro">
-            Things I'm currently learning and developing.
+    <section class="skills-hero">
+
+        <p class="small-title">
+            WHAT I DO
         </p>
 
-        <div class="skill-card">
-            <h2>HTML</h2>
-            <p>
-                Building the structure and content of websites.
-            </p>
+        <h1>
+            Skills & Capabilities
+        </h1>
+
+        <p>
+            I'm continuously building practical skills across accounting,
+            technology, web development, AI, and digital creation.
+            This page represents skills I am currently developing and
+            applying through practical projects and self-directed learning.
+        </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills-container">
+
+
+        <!-- ACCOUNTING -->
+
+        <div class="skill-category">
+
+            <h2>📊 Accounting & Finance</h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Accounting Fundamentals</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Bookkeeping</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Zoho Books</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Microsoft Excel</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="skill-card">
-            <h2>CSS</h2>
-            <p>
-                Designing and styling websites to make them
-                clean, responsive, and visually appealing.
-            </p>
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="skill-category">
+
+            <h2>💻 Web Development</h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 60%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-level">Learning</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 25%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">GitHub & GitHub Pages</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 55%;"></div>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="skill-card">
-            <h2>JavaScript</h2>
-            <p>
-                Learning how to make websites interactive
-                and responsive to user actions.
-            </p>
+
+        <!-- AI & DIGITAL CREATION -->
+
+        <div class="skill-category">
+
+            <h2>🤖 AI & Digital Creation</h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">AI Tools</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">AI Prompting</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Digital Content Creation</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Visual Content</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEADERSHIP -->
+
+        <div class="skill-category">
+
+            <h2>🤝 Professional & Leadership</h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Communication</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Team Coordination</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Leadership</span>
+                    <span class="skill-level">Practical</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span class="skill-name">Problem Solving</span>
+                    <span class="skill-level">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+
+            </div>
+
         </div>
 
     </section>
 
+
+    <!-- PROFESSIONAL APPROACH -->
+
+    <section class="professional-section">
+
+        <p class="small-title">
+            HOW I WORK
+        </p>
+
+        <h2>
+            Skills I'm Building Beyond Software
+        </h2>
+
+        <p>
+            Technical skills are only part of the journey. I also focus
+            on developing the habits and abilities that help me work,
+            learn, and collaborate effectively.
+        </p>
+
+
+        <div class="professional-skills">
+
+            <div class="professional-card">
+
+                <h3>🧠 Adaptability</h3>
+
+                <p>
+                    I can step into unfamiliar areas, learn what is
+                    required, and adapt as the situation changes.
+                </p>
+
+            </div>
+
+
+            <div class="professional-card">
+
+                <h3>🔍 Curiosity</h3>
+
+                <p>
+                    I naturally enjoy exploring new tools, ideas,
+                    technologies, and ways of solving problems.
+                </p>
+
+            </div>
+
+
+            <div class="professional-card">
+
+                <h3>🚀 Self-Learning</h3>
+
+                <p>
+                    I take initiative to learn independently and turn
+                    knowledge into practical experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Simon Miracle Khidharth. All rights reserved.
+        </p>
+
+    </footer>
+
+
 </body>
-</html>
+    </html>
