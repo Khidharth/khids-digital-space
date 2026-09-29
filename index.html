@@ -57,7 +57,91 @@
             background-color: white;
             color: #111827;
         }
-        section {
+
+        .hero {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9ca3af;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: 22px;
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.hero-text p {
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 14px 22px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: white;
+    color: #111827;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image {
+    flex: 0 0 350px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+        @media (max-width: 700px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-image {
+        width: 280px;
+        flex: none;
+    }
+
+}
+     section {
     padding: 80px 20px;
 }
 
@@ -91,7 +175,7 @@ section h2 {
 <body>
 
     <nav>
-        <h2>KHID</h2>
+        <h2>KHIDHARTH</h2>
 
         <div>
             <nav>
@@ -110,12 +194,45 @@ section h2 {
     <section id="home">
         <h1>Hello, I'm Khid.</h1>
 
+<div class="hero">
+
+    <div class="hero-text">
+
+        <p class="small-title">WELCOME TO MY DIGITAL SPACE</p>
+
+        <h1>Simon Miracle Khidharth</h1>
+
+        <h2>
+            Aspiring Accountant | Junior Web Developer | Digital Creator
+        </h2>
+
         <p>
-            I'm learning to build websites, applications,
-            and digital experiences.
+            I thrive in self-directed learning and enjoy exploring
+            new ideas, learning how things work, and turning what
+            I learn into something useful.
         </p>
 
-        <button>View My Projects</button>
+        <p>
+            From accounting and business tools to web development,
+            AI, and digital creation, I'm constantly building new
+            skills and challenging myself to grow.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="projects.html">View My Work</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="20260326_152539.jpg"
+             alt="Simon Miracle Khidharth">
+
+    </div>
+
+</div>
     <section id="about">
 
     <h2>About Me</h2>
