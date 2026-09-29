@@ -86,13 +86,20 @@
         nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: center;
 }
 
 nav a,
 nav a:visited {
     color: white;
     text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 30px;
+    color: #6b7280;
 }
 
 nav a:hover {
