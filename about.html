@@ -1,79 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Me - Khid's Digital Space</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Simon Miracle Khidharth</title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #111827;
             color: white;
         }
 
         nav {
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 30px;
+            border-bottom: 1px solid #374151;
+            position: sticky;
+            top: 0;
+            background-color: #111827;
+            z-index: 1000;
         }
 
         nav h2 {
             margin: 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        nav div {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
+            font-size: 15px;
         }
 
-        .about {
-            max-width: 800px;
-            margin: 80px auto;
-            padding: 40px 25px;
-            text-align: center;
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        .about h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
+        /* ABOUT HERO */
+
+        .about-hero {
+            max-width: 1200px;
+            min-height: 75vh;
+            margin: auto;
+            padding: 80px 30px;
+
+            display: flex;
+            align-items: center;
+            gap: 70px;
         }
 
-        .about p {
+        .about-image {
+            flex: 0 0 430px;
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+            border-radius: 24px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .small-title {
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #9ca3af;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .about-content h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin: 0 0 20px;
+        }
+
+        .about-content h2 {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #d1d5db;
+            margin-bottom: 30px;
+        }
+
+        .about-content > p {
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #d1d5db;
             margin-bottom: 20px;
         }
 
-        .about-card {
+        /* HIGHLIGHTS */
+
+        .about-highlights {
+            max-width: 1200px;
+            margin: 20px auto 100px;
+            padding: 0 30px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .highlight-card {
             background-color: #1f2937;
             padding: 30px;
-            margin-top: 30px;
-            border-radius: 15px;
+            border-radius: 16px;
+            border: 1px solid #374151;
         }
 
-        .about-card h2 {
-            margin-bottom: 15px;
+        .highlight-card h3 {
+            font-size: 21px;
+            margin-top: 0;
+            margin-bottom: 12px;
         }
 
-        .back-button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 25px;
-            background-color: white;
-            color: #111827;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+        .highlight-card p {
+            color: #d1d5db;
+            line-height: 1.7;
+            margin: 0;
         }
+
+        /* PERSONAL APPROACH */
+
+        .approach {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 70px 30px;
+            text-align: center;
+            border-top: 1px solid #374151;
+        }
+
+        .approach h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .approach p {
+            font-size: 18px;
+            color: #d1d5db;
+            line-height: 1.9;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 18px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav div {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-hero {
+                min-height: auto;
+                padding: 60px 25px;
+                flex-direction: column;
+                gap: 45px;
+                text-align: center;
+            }
+
+            .about-image {
+                width: 320px;
+                max-width: 100%;
+                flex: none;
+            }
+
+            .about-content h1 {
+                font-size: 40px;
+            }
+
+            .about-content h2 {
+                font-size: 20px;
+            }
+
+            .about-content > p {
+                font-size: 16px;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+                padding: 0 25px;
+            }
+
+            .approach {
+                padding: 60px 25px;
+            }
+
+            .approach h2 {
+                font-size: 30px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
+    <!-- NAVIGATION -->
+
     <nav>
+
         <h2>KHID</h2>
 
         <div>
@@ -83,39 +243,167 @@
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </div>
+
     </nav>
 
-    <section class="about">
 
-        <h1>About Me</h1>
+    <!-- ABOUT SECTION -->
 
-        <p>
-            I'm Khid, an aspiring accountant who is also learning
-            web development and digital creation.
-        </p>
+    <section class="about-hero">
 
-        <p>
-            I'm interested in technology, creativity, and learning
-            how digital tools can be used to solve real problems.
-        </p>
+        <div class="about-image">
 
-        <div class="about-card">
+            <img
+                src="20260326_152539.jpg"
+                alt="Simon Miracle Khidharth"
+            >
 
-            <h2>My Goal</h2>
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT ME
+            </p>
+
+            <h1>
+                Simon Miracle Khidharth
+            </h1>
+
+            <h2>
+                Aspiring Accountant | Junior Web Developer | Digital Creator
+            </h2>
 
             <p>
-                My goal is to learn how to build useful websites,
-                applications, and digital experiences that can
-                make a real difference.
+                I'm a self-driven learner with a strong interest in
+                accounting, technology, web development, and digital
+                creativity.
+            </p>
+
+            <p>
+                I thrive in self-directed learning. When I come across
+                something new, I enjoy figuring out how it works,
+                practising it, and finding ways to turn what I've learned
+                into something useful.
+            </p>
+
+            <p>
+                My journey currently combines accounting with technology.
+                I'm developing my accounting knowledge through practical
+                work with tools such as Zoho Books and Microsoft Excel,
+                while also building my skills in HTML, CSS, web
+                development, AI tools, and digital content creation.
+            </p>
+
+            <p>
+                I'm naturally curious and adaptable. Trying new things is
+                one of the ways I grow, and I'm always open to learning
+                a new skill, taking on a challenge, or exploring an area
+                outside my comfort zone.
             </p>
 
         </div>
 
-        <a class="back-button" href="index.html">
-            Back to Home
-        </a>
+    </section>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <section class="about-highlights">
+
+        <div class="highlight-card">
+
+            <h3>📚 Self-Directed Learning</h3>
+
+            <p>
+                I enjoy learning independently, researching new ideas,
+                practising what I learn, and improving through hands-on
+                experience.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <h3>📊 Accounting</h3>
+
+            <p>
+                I'm developing practical accounting and bookkeeping
+                skills, including financial concepts, Excel and Zoho
+                Books workflows.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <h3>💻 Technology</h3>
+
+            <p>
+                I'm building practical web development skills with HTML,
+                CSS, GitHub and GitHub Pages while gradually moving toward
+                more advanced development.
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <h3>🤖 AI & Digital Creation</h3>
+
+            <p>
+                I explore AI tools, prompting, visual creation and
+                digital content production to turn ideas into useful
+                creative projects.
+            </p>
+
+        </div>
 
     </section>
+
+
+    <!-- MY APPROACH -->
+
+    <section class="approach">
+
+        <p class="small-title">
+            MY APPROACH
+        </p>
+
+        <h2>
+            Learn. Build. Adapt. Grow.
+        </h2>
+
+        <p>
+            I believe growth comes from being willing to learn,
+            experiment and take on new challenges. I don't always need
+            to know everything before I start. I learn by doing, making
+            mistakes, finding solutions and improving along the way.
+        </p>
+
+        <p>
+            Whether I'm working with accounting software, building a
+            website, exploring an AI tool, coordinating a team, or
+            creating digital content, I approach the experience as an
+            opportunity to learn something new.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Simon Miracle Khidharth. All rights reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
